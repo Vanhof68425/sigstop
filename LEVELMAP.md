@@ -8,7 +8,7 @@ Status: `concept` → `drafted` → `built` → `playtested` → `live`
 | Episode | Skills | Status |
 |---|---|---|
 | eps1.0_hellofriend.term | `whoami`, `pwd`, `ls`, `cat` | **live** |
-| eps1.1_moving-target.dot | `cd`, absolute vs relative paths | concept |
+| eps1.1_moving-target.dot | `cd`, absolute vs relative paths | **live** |
 | eps1.2_read-only.log | `less`, `head`, `tail` | concept |
 | eps1.3_hidden-in-plain-sight.dot | dotfiles, `ls -la` | concept |
 | eps1.4_needle.grep | `grep` | concept |
