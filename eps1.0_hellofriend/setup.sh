@@ -28,7 +28,7 @@ cat > "$ARTIFACT" << 'EOF'
  (You already know a command that creates things by
  touching them.)
 
- We don't stop the future. We make sure it has brakes.
+ Everyone sees. Nobody looks. We act.
 
                                         -- SIGSTOP
 ------------------------------------------------------------
