@@ -1,0 +1,12 @@
+{
+  "title": "eps2.1_rm-rf_never-again.log",
+  "description": "The previous operator's final session. Read it. Then prove you learned what they didn't.",
+  "details": {
+    "intro": { "text": "intro.md", "background": "setup.sh" },
+    "steps": [
+      { "title": "The sweep", "text": "step1.md", "verify": "verify.sh" }
+    ],
+    "finish": { "text": "finish.md" }
+  },
+  "backend": { "imageid": "ubuntu" }
+}

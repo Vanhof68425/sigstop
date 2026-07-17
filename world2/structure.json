@@ -2,9 +2,7 @@
   "title": "World 2 — Tradecraft",
   "description": "You're handling evidence now. One careless command and it's gone forever.",
   "items": [
-    {
-      "path": "eps2.0_make-and-move",
-      "title": "eps2.0_make-and-move.txt"
-    }
+    { "path": "eps2.0_make-and-move", "title": "eps2.0_make-and-move.txt" },
+    { "path": "eps2.1_rm-rf_never-again", "title": "eps2.1_rm-rf_never-again.log" }
   ]
 }
