@@ -22,3 +22,7 @@ you paths anymore. Time to see what filenames hide on their own.
 The dossier stays where it is. Delete nothing.
 
 You know the rest.
+
+---
+
+**[> next transmission: eps1.3_hidden-in-plain-sight.dot](https://killercoda.com/vanhof/scenario/eps1.3_hidden-in-plain-sight)**

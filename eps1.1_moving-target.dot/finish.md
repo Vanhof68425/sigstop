@@ -24,3 +24,7 @@ Next transmission: **eps1.2_read-only.log** — some files are too big to
 bottom, and one page at a time.
 
 And you're still not deleting anything. I checked.
+
+---
+
+**[> next transmission: eps1.2_read-only.log](https://killercoda.com/vanhof/scenario/eps1.2_read-only)**

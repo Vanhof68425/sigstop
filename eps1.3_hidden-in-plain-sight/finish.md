@@ -21,3 +21,7 @@ directory by sweeping four homes. Sweet. Now find six words inside
 forty thousand lines. Sweeping won't save you. Interrogation will.
 
 Delete nothing. Not even the furniture.
+
+---
+
+**[> next transmission: eps1.4_needle.grep](https://killercoda.com/vanhof/scenario/eps1.4_needle.grep)**

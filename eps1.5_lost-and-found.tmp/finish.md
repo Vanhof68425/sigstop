@@ -21,3 +21,7 @@ Next transmission: **eps1.6_rtfm.man** — the manual. After that,
 the job.
 
 Delete nothing. Especially now. *Especially* now.
+
+---
+
+**[> next transmission: eps1.6_rtfm.man](https://killercoda.com/vanhof/scenario/eps1.6_rtfm.man)**

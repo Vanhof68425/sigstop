@@ -23,3 +23,7 @@ Next transmission: **eps1.7_the-scavenger-hunt.root** —
 the job.
 
 Bring everything.
+
+---
+
+**[> next transmission: eps1.7_the-scavenger-hunt.root [THE JOB]](https://killercoda.com/vanhof/scenario/eps1.7_the-scavenger-hunt.root)**
