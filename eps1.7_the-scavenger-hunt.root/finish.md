@@ -30,4 +30,4 @@ Next transmission: **eps2.0_make-and-move.txt**
 
 ---
 
-**World 2 is in production. Watch the [level map](https://github.com/Vanhof68425/sigstop/blob/main/LEVELMAP.md) for the next transmission.**
+**[> next transmission: eps2.0_make-and-move.txt — World 2: Tradecraft](https://killercoda.com/vanhof/course/world2/eps2.0_make-and-move)**

@@ -24,3 +24,7 @@ That's not paranoia anymore. That's policy, and now you know why it's
 yours.
 
 Next transmission: **eps2.1_rm-rf_never-again.log**
+
+---
+
+**eps2.1 is being decrypted. Check [the level map](https://github.com/Vanhof68425/sigstop/blob/main/LEVELMAP.md) or [World 2](https://killercoda.com/vanhof/course/world2) — the transmission appears the moment it's ready.**
