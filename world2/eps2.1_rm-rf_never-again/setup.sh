@@ -115,8 +115,40 @@ fi
 
 # ONE milestone: the witness is rescued from telemetry while
 # telemetry still stands — proof they looked before flattening.
+# PLUS the deathwatch: if evidence is destroyed, the handler says so
+# immediately, once, in voice. There is no recovery — that's the point.
 __sigstop_watch() {
-  if [[ ! -f /tmp/.sigstop_ms1 && ! -e /var/sigstop/staging/telemetry/4471_witness.stmt ]]; then
+  # Deathwatch first: has any evidence died?
+  if [[ ! -f /tmp/.sigstop_dead ]]; then
+    local lost=""
+    if [[ ! -d /var/sigstop/staging ]]; then
+      lost="everything"
+    else
+      local id
+      for id in EV-BEFORE EV-AFTER EV-NOTE EV-COMMS EV-WITNESS; do
+        if ! grep -rq "id:$id" /var/sigstop/staging 2>/dev/null; then
+          lost="$id"
+          break
+        fi
+      done
+    fi
+    if [[ -n "$lost" ]]; then
+      touch /tmp/.sigstop_dead
+      echo ""
+      echo "  [SIGSTOP] stop."
+      echo "  [SIGSTOP] check the cache. it's gone. evidence is gone."
+      echo "  [SIGSTOP] there is no backup. i told you there was no backup."
+      echo "  [SIGSTOP] ..."
+      echo "  [SIGSTOP] now you know how fast it happens. faster than the"
+      echo "  [SIGSTOP] regret. restart the scenario and do it slow."
+      echo "  [SIGSTOP] switch only got one try. you get as many as your"
+      echo "  [SIGSTOP] pride allows."
+      echo ""
+      return
+    fi
+  fi
+  # Milestone: witness rescued while telemetry still stands
+  if [[ ! -f /tmp/.sigstop_ms1 && ! -f /tmp/.sigstop_dead && ! -e /var/sigstop/staging/telemetry/4471_witness.stmt ]]; then
     local found
     found=$(find /var/sigstop/staging -name "4471_witness.stmt" 2>/dev/null | head -1)
     if [[ -n "$found" ]]; then
