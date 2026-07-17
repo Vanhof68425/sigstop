@@ -9,12 +9,12 @@ Status: `concept` → `drafted` → `built` → `playtested` → `live`
 |---|---|---|
 | eps1.0_hellofriend.term | `whoami`, `pwd`, `ls`, `cat` | **live** |
 | eps1.1_moving-target.dot | `cd`, absolute vs relative paths | **live** |
-| eps1.2_read-only.log | `less`, `head`, `tail` | concept |
-| eps1.3_hidden-in-plain-sight.dot | dotfiles, `ls -la` | concept |
-| eps1.4_needle.grep | `grep` | concept |
-| eps1.5_lost-and-found.tmp | `find` | concept |
-| eps1.6_rtfm.man | `man`, `--help` | concept |
-| eps1.7_the-scavenger-hunt.root 👹 | BOSS — everything above | concept |
+| eps1.2_read-only.log | `less`, `head`, `tail` | **live** |
+| eps1.3_hidden-in-plain-sight.dot | dotfiles, `ls -la` | **live** |
+| eps1.4_needle.grep | `grep` | **live** |
+| eps1.5_lost-and-found.tmp | `find` | **live** |
+| eps1.6_rtfm.man | `man`, `--help` | **live** |
+| eps1.7_the-scavenger-hunt.root 👹 | BOSS — everything above | **live** |
 
 ## World 2 — Tradecraft
 *You're handling evidence now. One careless command and it's gone forever.*
