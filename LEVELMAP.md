@@ -2,21 +2,21 @@
 
 Status: `concept` → `drafted` → `built` → `playtested` → `live`
 
-**Start here:** [eps1.0_hellofriend.term](https://killercoda.com/vanhof/scenario/eps1.0_hellofriend) — play in order. No installation needed, runs in your browser.
+**Start here:** [eps1.0_hellofriend.term](https://killercoda.com/vanhof/course/world1/eps1.0_hellofriend) — play in order. No installation needed, runs in your browser.
 
 ## World 1 — The Approach
 *Observe without touching. SIGSTOP has been watching you.*
 
 | Episode | Skills | Status |
 |---|---|---|
-| [eps1.0_hellofriend.term](https://killercoda.com/vanhof/scenario/eps1.0_hellofriend) | `whoami`, `pwd`, `ls`, `cat` | **live** |
-| [eps1.1_moving-target.dot](https://killercoda.com/vanhof/scenario/eps1.1_moving-target.dot) | `cd`, absolute vs relative paths | **live** |
-| [eps1.2_read-only.log](https://killercoda.com/vanhof/scenario/eps1.2_read-only) | `less`, `head`, `tail` | **live** |
-| [eps1.3_hidden-in-plain-sight.dot](https://killercoda.com/vanhof/scenario/eps1.3_hidden-in-plain-sight) | dotfiles, `ls -la` | **live** |
-| [eps1.4_needle.grep](https://killercoda.com/vanhof/scenario/eps1.4_needle.grep) | `grep` | **live** |
-| [eps1.5_lost-and-found.tmp](https://killercoda.com/vanhof/scenario/eps1.5_lost-and-found.tmp) | `find` | **live** |
-| [eps1.6_rtfm.man](https://killercoda.com/vanhof/scenario/eps1.6_rtfm.man) | `man`, `--help` | **live** |
-| [eps1.7_the-scavenger-hunt.root](https://killercoda.com/vanhof/scenario/eps1.7_the-scavenger-hunt.root) 👹 | BOSS — everything above | **live** |
+| [eps1.0_hellofriend.term](https://killercoda.com/vanhof/course/world1/eps1.0_hellofriend) | `whoami`, `pwd`, `ls`, `cat` | **live** |
+| [eps1.1_moving-target.dot](https://killercoda.com/vanhof/course/world1/eps1.1_moving-target.dot) | `cd`, absolute vs relative paths | **live** |
+| [eps1.2_read-only.log](https://killercoda.com/vanhof/course/world1/eps1.2_read-only) | `less`, `head`, `tail` | **live** |
+| [eps1.3_hidden-in-plain-sight.dot](https://killercoda.com/vanhof/course/world1/eps1.3_hidden-in-plain-sight) | dotfiles, `ls -la` | **live** |
+| [eps1.4_needle.grep](https://killercoda.com/vanhof/course/world1/eps1.4_needle.grep) | `grep` | **live** |
+| [eps1.5_lost-and-found.tmp](https://killercoda.com/vanhof/course/world1/eps1.5_lost-and-found.tmp) | `find` | **live** |
+| [eps1.6_rtfm.man](https://killercoda.com/vanhof/course/world1/eps1.6_rtfm.man) | `man`, `--help` | **live** |
+| [eps1.7_the-scavenger-hunt.root](https://killercoda.com/vanhof/course/world1/eps1.7_the-scavenger-hunt.root) 👹 | BOSS — everything above | **live** |
 
 ## World 2 — Tradecraft
 *You're handling evidence now. One careless command and it's gone forever.*

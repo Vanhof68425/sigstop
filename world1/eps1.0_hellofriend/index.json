@@ -1,0 +1,23 @@
+{
+  "title": "eps1.0_hellofriend.term",
+  "description": "You've been contacted. Know where you are and who you are before you touch anything.",
+  "details": {
+    "intro": {
+      "text": "intro.md",
+      "background": "setup.sh"
+    },
+    "steps": [
+      {
+        "title": "First rule",
+        "text": "step1.md",
+        "verify": "verify.sh"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}

@@ -77,4 +77,4 @@ handler's claims — any real clandestine organization.
 *First rule, and it never stops being the first rule: know where you are
 and who you are before you touch anything.*
 
-**[▶ eps1.0_hellofriend.term](eps1.0_hellofriend/)**
+**[▶ eps1.0_hellofriend.term](https://killercoda.com/vanhof/course/world1/eps1.0_hellofriend)**

@@ -1,0 +1,14 @@
+{
+  "title": "World 1 — The Approach",
+  "description": "Observe without touching. SIGSTOP has been watching you.",
+  "items": [
+    { "path": "eps1.0_hellofriend", "title": "eps1.0_hellofriend.term" },
+    { "path": "eps1.1_moving-target.dot", "title": "eps1.1_moving-target.dot" },
+    { "path": "eps1.2_read-only", "title": "eps1.2_read-only.log" },
+    { "path": "eps1.3_hidden-in-plain-sight", "title": "eps1.3_hidden-in-plain-sight.dot" },
+    { "path": "eps1.4_needle.grep", "title": "eps1.4_needle.grep" },
+    { "path": "eps1.5_lost-and-found.tmp", "title": "eps1.5_lost-and-found.tmp" },
+    { "path": "eps1.6_rtfm.man", "title": "eps1.6_rtfm.man" },
+    { "path": "eps1.7_the-scavenger-hunt.root", "title": "eps1.7_the-scavenger-hunt.root [BOSS]" }
+  ]
+}
