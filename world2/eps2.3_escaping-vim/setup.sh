@@ -7,6 +7,9 @@
 #    screen fires on first open
 # 3. .vimrc guard: nocompatible + sane backspace, so arrows behave
 #    for beginners even if the image ships vim-tiny
+# 4. Watcher: ONE milestone (reply armed) + the deathwatch on the
+#    transmission's md5 — altered evidence ends the run, in voice,
+#    once (irreversibility is part of tonight's doctrine)
 
 set -e
 
@@ -99,8 +102,31 @@ if [[ $- == *i* && ! -f /tmp/.sigstop_motd_shown ]]; then
 fi
 
 # ONE milestone: the reply carries the ending.
+# PLUS the deathwatch: the transmission must stay byte-identical to
+# intake. If its md5 stops matching the stored sum, the handler says
+# so immediately, once, in voice. Fires once, then silence — never
+# reacts to keystrokes, never intercepts, never blocks.
 __sigstop_watch() {
-  if [[ ! -f /tmp/.sigstop_ms1 ]]; then
+  if [[ ! -f /tmp/.sigstop_dead && -f /tmp/.sigstop_drop07.sum ]]; then
+    local sum
+    sum=$(md5sum /var/sigstop/drop/transmission_07.msg 2>/dev/null | awk '{print $1}')
+    if [[ "$sum" != "$(cat /tmp/.sigstop_drop07.sum)" ]]; then
+      touch /tmp/.sigstop_dead
+      echo ""
+      echo "  [SIGSTOP] stop."
+      echo "  [SIGSTOP] the transmission doesn't hash the way it arrived."
+      echo "  [SIGSTOP] i don't care if it's one byte. the source said it"
+      echo "  [SIGSTOP] first: precision is identity. altered evidence isn't"
+      echo "  [SIGSTOP] evidence — it's a story we tell ourselves about"
+      echo "  [SIGSTOP] evidence, and nobody inside apex risks their badge"
+      echo "  [SIGSTOP] for a story."
+      echo "  [SIGSTOP] integrity's gone. restart the scenario. this time"
+      echo "  [SIGSTOP] leave the room with :q! — hands where i can see them."
+      echo ""
+      return
+    fi
+  fi
+  if [[ ! -f /tmp/.sigstop_ms1 && ! -f /tmp/.sigstop_dead ]]; then
     if grep -qF 'we act.' /var/sigstop/drop/reply.draft 2>/dev/null; then
       touch /tmp/.sigstop_ms1
       echo ""
