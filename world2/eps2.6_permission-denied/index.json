@@ -1,0 +1,12 @@
+{
+  "title": "eps2.6_permission-denied.mod",
+  "description": "Nine switches decide who starves at every door on the box. Tonight you learn them all — and the sealed door in /opt finally opens.",
+  "details": {
+    "intro": { "text": "intro.md", "background": "setup.sh" },
+    "steps": [
+      { "title": "The locks", "text": "step1.md", "verify": "verify.sh" }
+    ],
+    "finish": { "text": "finish.md" }
+  },
+  "backend": { "imageid": "ubuntu" }
+}

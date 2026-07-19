@@ -27,11 +27,11 @@ Status: `concept` → `drafted` → `built` → `playtested` → `live`
 | [eps2.1_rm-rf_never-again.log](https://killercoda.com/vanhof/course/world2/eps2.1_rm-rf_never-again) ⚠️ | destructive commands, `rm -i`, precision deletion | **live** |
 | [eps2.2_nano-survival.cfg](https://killercoda.com/vanhof/course/world2/eps2.2_nano-survival) | editing with `nano` | **live** |
 | [eps2.3_escaping-vim.swp](https://killercoda.com/vanhof/course/world2/eps2.3_escaping-vim) | `i`, `Esc`, `:wq`, `:q!`, swap files — escape with the file intact | **live** |
-| eps2.4_plumbing.pipe | redirection, `>`, `>>`, `\|` | concept |
-| eps2.5_who-owns-what.grp | users, groups, `chown` | concept |
-| eps2.6_permission-denied.mod | `rwx`, `chmod` | concept |
-| eps2.7_superuser.sudo | `sudo`, and why to fear it | concept |
-| eps2.8_locked-out.root 👹 | BOSS — a permissions mess | concept |
+| [eps2.4_plumbing.pipe](https://killercoda.com/vanhof/course/world2/eps2.4_plumbing) | redirection, `>`, `>>`, `\|`, `wc` | **live** |
+| [eps2.5_who-owns-what.grp](https://killercoda.com/vanhof/course/world2/eps2.5_who-owns-what) | users, groups, `chown`, `usermod -aG` | **live** |
+| [eps2.6_permission-denied.mod](https://killercoda.com/vanhof/course/world2/eps2.6_permission-denied) | `rwx`, `chmod` — pays off /opt/apex | **live** |
+| [eps2.7_superuser.sudo](https://killercoda.com/vanhof/course/world2/eps2.7_superuser) | `sudo`, sudoers, and why to fear `ALL` | **live** |
+| [eps2.8_locked-out.root](https://killercoda.com/vanhof/course/world2/eps2.8_locked-out) 👹 | BOSS — the half-fired lockdown, everything above | **live** |
 
 ## World 3 — The Runaway
 *Apex systems are misbehaving. Find it. Pause it. Kill it if you have to.*

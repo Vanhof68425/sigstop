@@ -109,12 +109,26 @@ spiraling long sentence. Teach as tradecraft, never as tutorial. The
 banned words list in VOICE.md is enforced.
 
 ## Current state (update this section as episodes ship)
-Live: world1 complete (eps1.0–1.7), world2 eps2.0–2.3.
-New canon from eps2.3: the live source's first transmission (drop 07)
-arrived through the fixed relay; the player confirmed the channel
-with "we act."; the source is quiet until they send "the rest —
-and the rest will not fit in one file" (hooks eps2.4).
-Next planned: eps2.4_plumbing.pipe — pipes/redirection, framed as
-the flood that can't be read, only routed (hooked in eps2.3's
-finish). After: eps2.5 ownership, eps2.6 permissions (pays off
-/opt/apex locks), eps2.7 sudo, eps2.8 boss "locked-out".
+Live: world1 and world2 complete (eps1.0–1.7, eps2.0–2.8).
+New canon from the eps2.4–2.8 arc:
+- Drop 08 ("the rest"): 12 shards + 5 shim entries hidden in
+  telemetry noise; the full 4471 timeline incl. the hallway
+  reclassification (name still unsaid); window now inside six weeks.
+- The courier: second account on the box, group `cell`, knows
+  nothing extractable. Moves evidence physically. Ghost uid 1201
+  file (indirect echo only — never named).
+- /opt/apex payoff (eps2.6): mirror of Apex's deploy tree captured
+  at the W1 boss; deploy_gate.conf shows safety_shim=report_only,
+  window=advanced, approvals=auto. Player opened it, left codeword
+  /root/report_only, and RE-SEALED it to 000 — the mirror stays
+  sealed in future episodes, now by the player's own hand.
+- relay-burn (/usr/local/bin) + /var/sigstop/burn receipts;
+  courier's scoped sudoers grant (relay-burn only). Skeleton keys
+  (apex-compat, lockdown) were killed; "ALL is an abdication."
+- eps2.8 boss: Apex counter-scan (defensive — they're hunting
+  something inside their own walls), the half-fired lockdown, the
+  courier's dawn pickup: ALL evidence is now off the box, moving.
+- W3 hook: eval hardware spinning at 3 a.m. on jobs nobody
+  scheduled. The Runaway.
+Next planned: eps3.0_whats-running.ps — `ps`/`top`, first sight of
+the thing nobody admits to starting (hooked in eps2.8's finish).

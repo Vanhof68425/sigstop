@@ -1,0 +1,12 @@
+{
+  "title": "eps2.7_superuser.sudo",
+  "description": "Root is weather — it goes through every lock you own. Learn to borrow it in slivers, and kill the skeleton key somebody left in the door.",
+  "details": {
+    "intro": { "text": "intro.md", "background": "setup.sh" },
+    "steps": [
+      { "title": "The slivers", "text": "step1.md", "verify": "verify.sh" }
+    ],
+    "finish": { "text": "finish.md" }
+  },
+  "backend": { "imageid": "ubuntu" }
+}

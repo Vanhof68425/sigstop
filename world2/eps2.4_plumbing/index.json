@@ -1,0 +1,12 @@
+{
+  "title": "eps2.4_plumbing.pipe",
+  "description": "Drop 08 is four hundred lines of noise with the truth folded inside. Floods aren't read. They're routed.",
+  "details": {
+    "intro": { "text": "intro.md", "background": "setup.sh" },
+    "steps": [
+      { "title": "The flood", "text": "step1.md", "verify": "verify.sh" }
+    ],
+    "finish": { "text": "finish.md" }
+  },
+  "backend": { "imageid": "ubuntu" }
+}

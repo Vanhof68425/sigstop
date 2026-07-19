@@ -34,6 +34,6 @@ Next transmission: **eps2.4_plumbing.pipe**
 
 ---
 
-**eps2.4 is being decrypted. Check [the level map](https://github.com/Vanhof68425/sigstop/blob/main/LEVELMAP.md) or [World 2](https://killercoda.com/vanhof/course/world2) — the transmission appears the moment it's ready.**
+**[> next transmission: eps2.4_plumbing.pipe](https://killercoda.com/vanhof/course/world2/eps2.4_plumbing)**
 
 *(One live session at a time — close this tab behind you, or take the SCENARIOS door. An operator never leaves a channel open.)*

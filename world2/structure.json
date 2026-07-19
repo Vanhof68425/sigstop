@@ -5,6 +5,11 @@
     { "path": "eps2.0_make-and-move", "title": "eps2.0_make-and-move.txt" },
     { "path": "eps2.1_rm-rf_never-again", "title": "eps2.1_rm-rf_never-again.log" },
     { "path": "eps2.2_nano-survival", "title": "eps2.2_nano-survival.cfg" },
-    { "path": "eps2.3_escaping-vim", "title": "eps2.3_escaping-vim.swp" }
+    { "path": "eps2.3_escaping-vim", "title": "eps2.3_escaping-vim.swp" },
+    { "path": "eps2.4_plumbing", "title": "eps2.4_plumbing.pipe" },
+    { "path": "eps2.5_who-owns-what", "title": "eps2.5_who-owns-what.grp" },
+    { "path": "eps2.6_permission-denied", "title": "eps2.6_permission-denied.mod" },
+    { "path": "eps2.7_superuser", "title": "eps2.7_superuser.sudo" },
+    { "path": "eps2.8_locked-out", "title": "eps2.8_locked-out.root" }
   ]
 }
