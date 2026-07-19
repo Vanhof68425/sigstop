@@ -23,6 +23,6 @@ Next transmission: **eps2.3_escaping-vim.swp**
 
 ---
 
-**eps2.3 is being decrypted. Check [the level map](https://github.com/Vanhof68425/sigstop/blob/main/LEVELMAP.md) or [World 2](https://killercoda.com/vanhof/course/world2) — the transmission appears the moment it's ready.**
+**[> next transmission: eps2.3_escaping-vim.swp](https://killercoda.com/vanhof/course/world2/eps2.3_escaping-vim)**
 
 *(One live session at a time — close this tab behind you, or take the SCENARIOS door. An operator never leaves a channel open.)*

@@ -4,6 +4,7 @@
   "items": [
     { "path": "eps2.0_make-and-move", "title": "eps2.0_make-and-move.txt" },
     { "path": "eps2.1_rm-rf_never-again", "title": "eps2.1_rm-rf_never-again.log" },
-    { "path": "eps2.2_nano-survival", "title": "eps2.2_nano-survival.cfg" }
+    { "path": "eps2.2_nano-survival", "title": "eps2.2_nano-survival.cfg" },
+    { "path": "eps2.3_escaping-vim", "title": "eps2.3_escaping-vim.swp" }
   ]
 }

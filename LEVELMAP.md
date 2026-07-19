@@ -26,7 +26,7 @@ Status: `concept` → `drafted` → `built` → `playtested` → `live`
 | [eps2.0_make-and-move.txt](https://killercoda.com/vanhof/course/world2/eps2.0_make-and-move) | `touch`, `mkdir`, `cp`, `mv`, `rm` | **live** |
 | [eps2.1_rm-rf_never-again.log](https://killercoda.com/vanhof/course/world2/eps2.1_rm-rf_never-again) ⚠️ | destructive commands, `rm -i`, precision deletion | **live** |
 | [eps2.2_nano-survival.cfg](https://killercoda.com/vanhof/course/world2/eps2.2_nano-survival) | editing with `nano` | **live** |
-| eps2.3_escaping-vim.swp | `i`, `Esc`, `:wq`, `:q!` — escape with the file intact | concept |
+| [eps2.3_escaping-vim.swp](https://killercoda.com/vanhof/course/world2/eps2.3_escaping-vim) | `i`, `Esc`, `:wq`, `:q!`, swap files — escape with the file intact | **live** |
 | eps2.4_plumbing.pipe | redirection, `>`, `>>`, `\|` | concept |
 | eps2.5_who-owns-what.grp | users, groups, `chown` | concept |
 | eps2.6_permission-denied.mod | `rwx`, `chmod` | concept |

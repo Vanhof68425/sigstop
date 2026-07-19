@@ -109,9 +109,12 @@ spiraling long sentence. Teach as tradecraft, never as tutorial. The
 banned words list in VOICE.md is enforced.
 
 ## Current state (update this section as episodes ship)
-Live: world1 complete (eps1.0–1.7), world2 eps2.0–2.2.
-Next planned: eps2.3_escaping-vim.swp — vim survival (open, i, Esc,
-:wq, :q!), framed as "the operating theater everyone jokes about"
-(hooked in eps2.2's finish). After: eps2.4 pipes/redirection,
-eps2.5 ownership, eps2.6 permissions (pays off /opt/apex locks),
-eps2.7 sudo, eps2.8 boss "locked-out".
+Live: world1 complete (eps1.0–1.7), world2 eps2.0–2.3.
+New canon from eps2.3: the live source's first transmission (drop 07)
+arrived through the fixed relay; the player confirmed the channel
+with "we act."; the source is quiet until they send "the rest —
+and the rest will not fit in one file" (hooks eps2.4).
+Next planned: eps2.4_plumbing.pipe — pipes/redirection, framed as
+the flood that can't be read, only routed (hooked in eps2.3's
+finish). After: eps2.5 ownership, eps2.6 permissions (pays off
+/opt/apex locks), eps2.7 sudo, eps2.8 boss "locked-out".

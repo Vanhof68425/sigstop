@@ -1,0 +1,12 @@
+{
+  "title": "eps2.3_escaping-vim.swp",
+  "description": "A live source. A half-written reply. The room everyone jokes about. In, finish it, out — file intact.",
+  "details": {
+    "intro": { "text": "intro.md", "background": "setup.sh" },
+    "steps": [
+      { "title": "The theater", "text": "step1.md", "verify": "verify.sh" }
+    ],
+    "finish": { "text": "finish.md" }
+  },
+  "backend": { "imageid": "ubuntu" }
+}
