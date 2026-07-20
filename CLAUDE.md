@@ -61,10 +61,10 @@ Folder: `worldN/epsN.M_slug/` containing:
   `history -c 2>/dev/null || true` and `echo "done" > /tmp/setup-complete`.
 - `foreground.sh` — the terminal gate (identical in every episode;
   copy it verbatim). Silently waits for /tmp/setup-complete
-  (sleep-1 loop, no output), removes /tmp/.sigstop_motd_shown,
-  runs `clear`, then `exec /bin/bash` so the fresh shell reads the
-  themed .bashrc and re-prints the MOTD. Must be executable and
-  registered as the intro's "foreground" script.
+  (sleep-1 loop, no output), removes /tmp/.sigstop_motd_shown, then
+  ends with `clear; exec /bin/bash` on one line so the fresh shell
+  reads the themed .bashrc and re-prints the MOTD. Must be
+  executable and registered as the intro's "foreground" script.
 - `verify.sh` — exit 0 = pass, nonzero = fail. VERIFY OUTCOMES, NEVER
   COMMANDS (never parse bash history). Content markers
   (`[evidence // sigstop // id:XX]`) + grep are the standard for
@@ -94,10 +94,11 @@ future candidates: bosses). Do not add it to teaching episodes.
   `exec /bin/bash` re-reads the themed .bashrc.
 - Foreground scripts are TYPED VISIBLY into the player's terminal,
   command by command (KillerCoda's spinner already covers the setup
-  wait — no progress output needed). They must therefore end with
-  `clear` to wipe the typed commands, and must remove the MOTD flag
-  (/tmp/.sigstop_motd_shown) before the exec so the final shell
-  greets with the MOTD.
+  wait — no progress output needed). `clear` only erases what came
+  BEFORE it, so the script must end with `clear; exec /bin/bash` on
+  ONE line — exec sharing the line with clear leaves no typed
+  residue. The MOTD flag (/tmp/.sigstop_motd_shown) must be removed
+  before the exec so the final shell greets with the MOTD.
 - verify.sh output is never shown to the player. Narrative feedback
   must come from PROMPT_COMMAND watchers.
 - No native "next" button. Navigation = finish.md links + SCENARIOS
