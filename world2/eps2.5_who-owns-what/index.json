@@ -2,7 +2,7 @@
   "title": "eps2.5_who-owns-what.grp",
   "description": "A second account on the box. A file that answers to a number instead of a name. Ownership is testimony — learn to read it, then hand the evidence over.",
   "details": {
-    "intro": { "text": "intro.md", "background": "setup.sh" },
+    "intro": { "text": "intro.md", "background": "setup.sh", "foreground": "foreground.sh" },
     "steps": [
       { "title": "The handoff", "text": "step1.md", "verify": "verify.sh" }
     ],

@@ -2,7 +2,7 @@
   "title": "eps1.4_needle.grep",
   "description": "Six words inside forty thousand lines. Don't read. Interrogate.",
   "details": {
-    "intro": { "text": "intro.md", "background": "setup.sh" },
+    "intro": { "text": "intro.md", "background": "setup.sh", "foreground": "foreground.sh" },
     "steps": [
       { "title": "The interrogation", "text": "step1.md", "verify": "verify.sh" }
     ],

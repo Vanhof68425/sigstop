@@ -49,8 +49,8 @@ down Apex Cognition, an AI lab racing to ship an unsafe model.
 ## Episode structure (every episode, exactly)
 Folder: `worldN/epsN.M_slug/` containing:
 - `index.json` — KillerCoda config. Copy shape from any live episode:
-  intro (text + background: setup.sh), one step (text + verify), finish.
-  Backend imageid "ubuntu".
+  intro (text + background: setup.sh + foreground: foreground.sh),
+  one step (text + verify), finish. Backend imageid "ubuntu".
 - `intro.md` — the handler's monologue. Ends "Click **START**."
 - `step1.md` — the task + three collapsible hints (`<details>`):
   `> ping handler` (reframe, never reveal), `>> ping again` (name tools,
@@ -59,6 +59,11 @@ Folder: `worldN/epsN.M_slug/` containing:
 - `setup.sh` — stages the box: story artifacts, task state, and the
   theming block (see below). `set -e`, ends with
   `history -c 2>/dev/null || true` and `echo "done" > /tmp/setup-complete`.
+- `foreground.sh` — the terminal gate (identical in every episode;
+  copy it verbatim). Waits for /tmp/setup-complete in a dot-printing
+  loop, clears, prints "[SIGSTOP] channel established.", then
+  `exec /bin/bash` so the shell re-reads the themed .bashrc. Must be
+  executable and registered as the intro's "foreground" script.
 - `verify.sh` — exit 0 = pass, nonzero = fail. VERIFY OUTCOMES, NEVER
   COMMANDS (never parse bash history). Content markers
   (`[evidence // sigstop // id:XX]`) + grep are the standard for
@@ -81,6 +86,11 @@ future candidates: bosses). Do not add it to teaching episodes.
 
 ## Platform facts (KillerCoda)
 - Player runs as root. No permission errors on find; plan accordingly.
+- RACE CONDITION: the terminal opens before the background setup.sh
+  finishes, so a bare shell reads .bashrc before the theming block
+  exists and the player gets a default prompt. Fix (mandatory, every
+  episode): foreground.sh waits for /tmp/setup-complete, then
+  `exec /bin/bash` re-reads the themed .bashrc.
 - verify.sh output is never shown to the player. Narrative feedback
   must come from PROMPT_COMMAND watchers.
 - No native "next" button. Navigation = finish.md links + SCENARIOS
@@ -93,7 +103,7 @@ future candidates: bosses). Do not add it to teaching episodes.
 - Folder names are frozen once live (URLs break on rename).
 
 ## Release ritual for a new episode
-1. Create the episode folder (all 6 files).
+1. Create the episode folder (all 7 files, incl. foreground.sh).
 2. Add it to `worldN/structure.json`.
 3. Replace the previous episode's "being decrypted" holding block with
    the real next-transmission link (keep the session note line).

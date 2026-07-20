@@ -2,7 +2,7 @@
   "title": "eps2.0_make-and-move.txt",
   "description": "Creating. Copying. Moving. And, for the first time, deleting.",
   "details": {
-    "intro": { "text": "intro.md", "background": "setup.sh" },
+    "intro": { "text": "intro.md", "background": "setup.sh", "foreground": "foreground.sh" },
     "steps": [
       { "title": "The vault", "text": "step1.md", "verify": "verify.sh" }
     ],

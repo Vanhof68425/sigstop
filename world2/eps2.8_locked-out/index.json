@@ -2,7 +2,7 @@
   "title": "eps2.8_locked-out.root",
   "description": "BOSS. The handoff night. A counter-scan tripped the lockdown halfway and the vault ate itself. Everything World 2 taught you, all at once, for real.",
   "details": {
-    "intro": { "text": "intro.md", "background": "setup.sh" },
+    "intro": { "text": "intro.md", "background": "setup.sh", "foreground": "foreground.sh" },
     "steps": [
       { "title": "The lockout", "text": "step1.md", "verify": "verify.sh" }
     ],
