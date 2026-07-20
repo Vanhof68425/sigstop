@@ -60,10 +60,11 @@ Folder: `worldN/epsN.M_slug/` containing:
   theming block (see below). `set -e`, ends with
   `history -c 2>/dev/null || true` and `echo "done" > /tmp/setup-complete`.
 - `foreground.sh` — the terminal gate (identical in every episode;
-  copy it verbatim). Waits for /tmp/setup-complete in a dot-printing
-  loop, clears, prints "[SIGSTOP] channel established.", then
-  `exec /bin/bash` so the shell re-reads the themed .bashrc. Must be
-  executable and registered as the intro's "foreground" script.
+  copy it verbatim). Silently waits for /tmp/setup-complete
+  (sleep-1 loop, no output), removes /tmp/.sigstop_motd_shown,
+  runs `clear`, then `exec /bin/bash` so the fresh shell reads the
+  themed .bashrc and re-prints the MOTD. Must be executable and
+  registered as the intro's "foreground" script.
 - `verify.sh` — exit 0 = pass, nonzero = fail. VERIFY OUTCOMES, NEVER
   COMMANDS (never parse bash history). Content markers
   (`[evidence // sigstop // id:XX]`) + grep are the standard for
@@ -91,6 +92,12 @@ future candidates: bosses). Do not add it to teaching episodes.
   exists and the player gets a default prompt. Fix (mandatory, every
   episode): foreground.sh waits for /tmp/setup-complete, then
   `exec /bin/bash` re-reads the themed .bashrc.
+- Foreground scripts are TYPED VISIBLY into the player's terminal,
+  command by command (KillerCoda's spinner already covers the setup
+  wait — no progress output needed). They must therefore end with
+  `clear` to wipe the typed commands, and must remove the MOTD flag
+  (/tmp/.sigstop_motd_shown) before the exec so the final shell
+  greets with the MOTD.
 - verify.sh output is never shown to the player. Narrative feedback
   must come from PROMPT_COMMAND watchers.
 - No native "next" button. Navigation = finish.md links + SCENARIOS
