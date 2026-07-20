@@ -2,7 +2,7 @@
   "title": "eps2.2_nano-survival.cfg",
   "description": "How Apex found the cache: one config line nobody opened. Tonight you learn the scalpel.",
   "details": {
-    "intro": { "text": "intro.md", "background": "setup.sh" },
+    "intro": { "text": "intro.md", "background": "setup.sh", "foreground": "foreground.sh" },
     "steps": [
       { "title": "The surgery", "text": "step1.md", "verify": "verify.sh" }
     ],

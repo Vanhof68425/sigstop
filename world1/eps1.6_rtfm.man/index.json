@@ -2,7 +2,7 @@
   "title": "eps1.6_rtfm.man",
   "description": "The only teacher that never disappears. Read the manual. Actually read it.",
   "details": {
-    "intro": { "text": "intro.md", "background": "setup.sh" },
+    "intro": { "text": "intro.md", "background": "setup.sh", "foreground": "foreground.sh" },
     "steps": [
       { "title": "The last lesson", "text": "step1.md", "verify": "verify.sh" }
     ],

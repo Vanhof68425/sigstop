@@ -2,7 +2,7 @@
   "title": "eps1.2_read-only.log",
   "description": "Some files are too big to cat. Read like an operator: the top, the bottom, one page at a time.",
   "details": {
-    "intro": { "text": "intro.md", "background": "setup.sh" },
+    "intro": { "text": "intro.md", "background": "setup.sh", "foreground": "foreground.sh" },
     "steps": [
       { "title": "The incident file", "text": "step1.md", "verify": "verify.sh" }
     ],

@@ -2,7 +2,7 @@
   "title": "eps1.5_lost-and-found.tmp",
   "description": "Files have names. There's a tool that hunts by name across everything.",
   "details": {
-    "intro": { "text": "intro.md", "background": "setup.sh" },
+    "intro": { "text": "intro.md", "background": "setup.sh", "foreground": "foreground.sh" },
     "steps": [
       { "title": "The scattered copies", "text": "step1.md", "verify": "verify.sh" }
     ],
