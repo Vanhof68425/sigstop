@@ -7,6 +7,12 @@ Your incoming pile:
 Four files. Three are the Reyes evidence. One is a corrupted duplicate
 from a botched transfer — open them and you'll know which.
 
+> **Tonight's tools**
+> `mkdir -p <path>` — create a directory, including any missing parents
+> `cp <source> <destination>` — copy a file; the destination can include a new name
+> `cat <file>` — print a file to the screen
+> `rm <file>` — delete one file. Permanently. There is no undo.
+
 The job, in order:
 
 1. **Build the vault:** a directory at `/root/vault/4471`

@@ -4,7 +4,9 @@
   "details": {
     "intro": { "text": "intro.md", "background": "setup.sh", "foreground": "foreground.sh" },
     "steps": [
-      { "title": "The slivers", "text": "step1.md", "verify": "verify.sh" }
+      { "title": "Read the ledger", "text": "step1.md", "verify": "verify1.sh" },
+      { "title": "Kill the key", "text": "step2.md", "verify": "verify2.sh" },
+      { "title": "The burn", "text": "step3.md", "verify": "verify3.sh" }
     ],
     "finish": { "text": "finish.md" }
   },

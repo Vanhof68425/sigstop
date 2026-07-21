@@ -10,6 +10,13 @@ they exist, they phone home. The cache:
 /var/sigstop/staging/
 ```
 
+> **Tonight's tools**
+> `find <dir> -name "<pattern>"` — list every matching file under a directory
+> `ls -la <dir>` — list a directory's contents, including hidden files
+> `mv <source> <destination>` — move a file somewhere else
+> `rm <file>` — delete one file. Permanently.
+> `rm -rf <dir>` — delete a directory and everything inside it. Permanently.
+
 Your orders:
 
 1. **Every `.trk` file dies.** All of them, wherever they nest.

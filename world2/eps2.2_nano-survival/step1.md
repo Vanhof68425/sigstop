@@ -9,6 +9,11 @@ it first. Then open the config and make it match the spec. Three lines
 are wrong. Everything else is right — which means everything else must
 *stay* right. Surgery, not demolition.
 
+> **Tonight's tools**
+> `cat <file>` — print a file to the screen
+> `nano <file>` — open a file in the nano editor
+> Inside nano: `^W` search, `^O` save (nano calls it "Write Out"), `^X` exit. The `^` means hold Ctrl.
+
 When the file is correct, save, exit, and hit CHECK. No codeword. The
 config is the signal.
 

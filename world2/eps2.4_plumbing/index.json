@@ -4,7 +4,9 @@
   "details": {
     "intro": { "text": "intro.md", "background": "setup.sh", "foreground": "foreground.sh" },
     "steps": [
-      { "title": "The flood", "text": "step1.md", "verify": "verify.sh" }
+      { "title": "Route the shards", "text": "step1.md", "verify": "verify1.sh" },
+      { "title": "Append the entries", "text": "step2.md", "verify": "verify2.sh" },
+      { "title": "Cut the manifest", "text": "step3.md", "verify": "verify3.sh" }
     ],
     "finish": { "text": "finish.md" }
   },

@@ -39,9 +39,9 @@ grep -q "pubmirror" "$C" && exit 1
 # 4. Their chatter, distilled, under vault rules
 E="$V/counterscan.extract"
 [ -f "$E" ] || exit 1
-[ "$(grep -cF '[counter //' "$E")" = "8" ] || exit 1
+[ "$(grep -c 'COUNTER-INT' "$E")" = "8" ] || exit 1
 [ "$(wc -l < "$E")" = "8" ] || exit 1
-grep -qF 'NOISE' "$E" && exit 1
+grep -q 'APX-SCAN-NOISE' "$E" && exit 1
 grep -q 'id:EV-SCANLOG' /var/sigstop/intake/scan.log || exit 1
 
 # 5. The ledger
