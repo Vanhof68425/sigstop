@@ -112,10 +112,56 @@ EOF
 chmod 440 /etc/sudoers.d/courier
 
 # ---------------------------------------------------------------
-# Fault 5: the scan chatter, unprocessed
+# The damage report — a real file on the box, plain ordered list
+# of the five faults with the concept each needs
+# ---------------------------------------------------------------
+cat > /root/damage_report.txt << 'EOF'
+=====================================================================
+ [lockdown // partial // 02:53:41 // recovered log]
+ Five faults. Fix them in this order.
+=====================================================================
+
+1. THE VAULT — /var/sigstop/vault is sealed and mis-owned.
+   Needs: ownership (eps2.5) and permissions (eps2.6).
+   End state: everything owned courier:cell. Directories 750,
+   files 640. That includes any file you create tonight.
+
+2. THE CALLING CARDS — the scan seeded .trk files under
+   /var/sigstop. One is nested next to evidence.
+   Needs: careful deletion (eps2.1).
+   End state: zero .trk files. Zero evidence lost. List before
+   you delete. No rm -rf on anything holding evidence.
+
+3. THE RELAY — /etc/sigstop/relay.conf rolled back to the breach
+   default.
+   Needs: an editor (eps2.2 or eps2.3).
+   End state: the endpoint line reads endpoint=drop.sigstop.net
+   and no other line changed.
+
+4. THE SCAN LOG — /var/sigstop/intake/scan.log is unprocessed.
+   Their chatter lines start with COUNTER-INT. The rest is noise.
+   Needs: grep and > (eps2.4).
+   End state: every COUNTER-INT line, and nothing else, in
+   /var/sigstop/vault/counterscan.extract — which then follows
+   vault rules like every other vault file (see fault 1).
+
+5. THE EMERGENCY KEY — /etc/sudoers.d/lockdown grants ALL and
+   never revoked itself.
+   Needs: the ledger ritual (eps2.7).
+   End state: the lockdown file gone, the courier grant intact,
+   visudo -c parses clean.
+
+THEN THE BURN — as the courier, through the standing grant
+   (eps2.7): su - courier, sudo the burn tool, exit. The receipt
+   must name the courier. That's the courier's pickup signal.
+=====================================================================
+EOF
+
+# ---------------------------------------------------------------
+# Fault 4 staging: the scan chatter, unprocessed
 # ---------------------------------------------------------------
 S="$I/scan.log"
-printf '[capture // sigstop // scan intercept // id:EV-SCANLOG]\n' > "$S"
+printf 'capture // sigstop // scan intercept // id:EV-SCANLOG\n' > "$S"
 ci=0
 counter=(
 "sweep origin 10.44.0.0/16. mode passive. operator tag: apx-sec-3."
@@ -128,9 +174,9 @@ counter=(
 "tag: do not attribute. plausible ISP scan profile maintained."
 )
 for n in $(seq 1 120); do
-  printf '[apx-scan // NOISE // tick %03d] segment quiet. moving on.\n' "$n" >> "$S"
+  printf 'APX-SCAN-NOISE tick %03d segment quiet. moving on.\n' "$n" >> "$S"
   if [ $((n % 15)) -eq 0 ] && [ $ci -lt 8 ]; then
-    printf '[counter // entry %d/8] %s\n' "$((ci + 1))" "${counter[$ci]}" >> "$S"
+    printf 'COUNTER-INT entry %d/8 %s\n' "$((ci + 1))" "${counter[$ci]}" >> "$S"
     ci=$((ci + 1))
   fi
 done
@@ -165,7 +211,8 @@ if [[ $- == *i* && ! -f /tmp/.sigstop_motd_shown ]]; then
   echo "  [SIGSTOP // secure channel open]"
   echo "  everyone sees. nobody looks. we act."
   echo ""
-  echo "  the lockdown half-fired. the damage report is in your brief."
+  echo "  the lockdown half-fired. the damage report survived:"
+  echo "  /root/damage_report.txt — read it first, fix in its order."
   echo "  the courier is circling the block."
   echo "  walk the layers. dawn is the deadline that's real."
   echo ""

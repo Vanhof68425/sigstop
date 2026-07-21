@@ -50,12 +50,21 @@ down Apex Cognition, an AI lab racing to ship an unsafe model.
 Folder: `worldN/epsN.M_slug/` containing:
 - `index.json` — KillerCoda config. Copy shape from any live episode:
   intro (text + background: setup.sh + foreground: foreground.sh),
-  one step (text + verify), finish. Backend imageid "ubuntu".
+  steps (text + verify), finish. Backend imageid "ubuntu". Teaching
+  episodes may split into multiple stepN.md + verifyN.sh (one taught
+  move per step, each verify checks only its own outcome); BOSSES
+  stay one step.
 - `intro.md` — the handler's monologue. Ends "Click **START**."
-- `step1.md` — the task + three collapsible hints (`<details>`):
-  `> ping handler` (reframe, never reveal), `>> ping again` (name tools,
-  no full commands), `>>> just tell me` (full commands + learning hook;
-  BOSSES refuse this tier in voice — see VOICE.md).
+- `step1.md` (and step2.md, step3.md where split) — the task + three
+  collapsible hints (`<details>`): `> ping handler` (reframe, never
+  reveal), `>> ping again` (name tools, no full commands),
+  `>>> just tell me` (full commands + learning hook; BOSSES refuse
+  this tier in voice — see VOICE.md). Every step opens with a
+  "Tonight's tools" box (plain one-liners, only that step's tools)
+  and a worked example before the task where the concept is new.
+  Orders in plain sentences; metaphors live in the intro, not the
+  orders. Nothing required to pass may live only in hints. Tags
+  players must grep are bracket-free strings (SHARD-4471 style).
 - `setup.sh` — stages the box: story artifacts, task state, and the
   theming block (see below). `set -e`, ends with
   `history -c 2>/dev/null || true` and `echo "done" > /tmp/setup-complete`.

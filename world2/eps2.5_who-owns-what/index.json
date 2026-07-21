@@ -4,7 +4,8 @@
   "details": {
     "intro": { "text": "intro.md", "background": "setup.sh", "foreground": "foreground.sh" },
     "steps": [
-      { "title": "The handoff", "text": "step1.md", "verify": "verify.sh" }
+      { "title": "Into the cell", "text": "step1.md", "verify": "verify1.sh" },
+      { "title": "The handoff", "text": "step2.md", "verify": "verify2.sh" }
     ],
     "finish": { "text": "finish.md" }
   },

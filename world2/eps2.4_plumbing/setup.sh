@@ -1,8 +1,10 @@
 #!/bin/bash
 # eps2.4_plumbing — setup
 # 1. The flood: drop 08 — ~400 lines of Apex telemetry noise with
-#    12 [4471 // shard] lines and 5 [shim //] lines folded in at
-#    deterministic intervals. Header line carries the survival marker.
+#    12 SHARD-4471 lines and 5 SHIM-ENTRY lines folded in at
+#    deterministic intervals. Tags are bracket-free on purpose:
+#    beginners grep them with no escaping and no -F. Header line
+#    carries the survival marker.
 # 2. Player routes shards with >, appends shim with >>, counts 17
 #    through a pipe into manifest.count. Flood must survive.
 # 3. Watcher: ONE milestone when the manifest reads 17 and the
@@ -37,17 +39,17 @@ shim=(
 "parked-by field is blank. blank fields have authors too."
 )
 
-printf '[intake // sigstop // drop 08 // id:EV-FLOOD]\n' > "$F"
+printf 'intake // sigstop // drop 08 // id:EV-FLOOD\n' > "$F"
 si=0
 hi=0
 for n in $(seq 1 400); do
-  printf '[apx-telemetry // NOISE // seq %04d] heartbeat ok. uplink ok. nobody watching.\n' "$n" >> "$F"
+  printf 'APX-NOISE seq %04d heartbeat ok. uplink ok. nobody watching.\n' "$n" >> "$F"
   if [ $((n % 30)) -eq 0 ] && [ $si -lt 12 ]; then
-    printf '[4471 // shard %02d/12] %s\n' "$((si + 1))" "${shards[$si]}" >> "$F"
+    printf 'SHARD-4471 %02d/12 %s\n' "$((si + 1))" "${shards[$si]}" >> "$F"
     si=$((si + 1))
   fi
   if [ $((n % 79)) -eq 0 ] && [ $hi -lt 5 ]; then
-    printf '[shim // entry %d/5] %s\n' "$((hi + 1))" "${shim[$hi]}" >> "$F"
+    printf 'SHIM-ENTRY %d/5 %s\n' "$((hi + 1))" "${shim[$hi]}" >> "$F"
     hi=$((hi + 1))
   fi
 done
@@ -79,8 +81,8 @@ __sigstop_watch() {
     local M="/var/sigstop/intake/manifest.count"
     if [[ -f "$E" && -f "$M" ]] \
        && [[ "$(tr -d '[:space:]' < "$M" 2>/dev/null)" == "17" ]] \
-       && [[ "$(grep -cF '[4471 // shard' "$E" 2>/dev/null)" == "12" ]] \
-       && ! grep -qF 'NOISE' "$E" 2>/dev/null; then
+       && [[ "$(grep -c 'SHARD-4471' "$E" 2>/dev/null)" == "12" ]] \
+       && ! grep -q 'APX-NOISE' "$E" 2>/dev/null; then
       touch /tmp/.sigstop_ms1
       echo ""
       echo "  [SIGSTOP] seventeen out of four hundred, and the count went"

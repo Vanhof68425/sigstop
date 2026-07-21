@@ -4,7 +4,9 @@
   "details": {
     "intro": { "text": "intro.md", "background": "setup.sh", "foreground": "foreground.sh" },
     "steps": [
-      { "title": "The theater", "text": "step1.md", "verify": "verify.sh" }
+      { "title": "The corpse", "text": "step1.md", "verify": "verify1.sh" },
+      { "title": "Read and leave", "text": "step2.md", "verify": "verify2.sh" },
+      { "title": "Finish the reply", "text": "step3.md", "verify": "verify3.sh" }
     ],
     "finish": { "text": "finish.md" }
   },

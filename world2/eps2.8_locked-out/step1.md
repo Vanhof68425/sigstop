@@ -1,36 +1,35 @@
-The damage report, verbatim from the lockdown's dying log:
+The lockdown's dying log survived. It's on the box:
 
 ```
-[lockdown // partial // 02:53:41]
- sealed: /var/sigstop/vault          (mode 000, owners scrambled)
- seeded: apx calling cards (*.trk)   (vault + intake, nested)
- reverted: /etc/sigstop/relay.conf   (endpoint rollback, pre-breach)
- granted: /etc/sudoers.d/lockdown    (emergency key, NOT revoked)
- captured: /var/sigstop/intake/scan.log  (their chatter, unprocessed)
- pending: the burn                   (courier waiting)
-[log ends]
+/root/damage_report.txt
 ```
 
-Operational spec — the state this box is in at dawn:
+Read it first. It lists the five faults in the order to fix them,
+and names which night taught you each one. Everything below is
+already in that file — this brief only adds the stakes.
 
-- **The vault lives again.** `/var/sigstop/vault`: directory owned
-  `courier:cell` at `750`; every file inside owned `courier:cell`
-  at `640`. Every file — including any you create tonight.
-- **Every calling card dies.** No `.trk` survives anywhere under
-  `/var/sigstop`. Every piece of evidence survives. Both sentences
-  are true at dawn.
-- **The relay tells no strangers.** The config speaks to
-  `drop.sigstop.net` and nothing else. You have fixed this exact
-  line before. It stays fixed.
-- **Their chatter, distilled.** Every `[counter //` line from the
-  scan log, routed into `/var/sigstop/vault/counterscan.extract` —
-  their scan pattern is intelligence, and it belongs in the vault,
-  which means it follows vault rules. Nothing else rides along.
-- **The emergency key is revoked.** The lockdown grant is removed
-  from the ledger, and the ledger still parses.
-- **The burn runs.** As the courier, through the standing grant.
-  The receipt names them. That's the signal the courier's watcher
-  is waiting for.
+> **Tonight's tools** — all of them. World 2, assembled:
+> `ls -la`, `cat`, `find <dir> -name "<pattern>"` — see before you touch
+> `rm` — one file, confirmed first. No `rm -rf` near evidence.
+> `nano` / `vim` — one line changes, nothing else
+> `grep <word> <file> > <newfile>` — route matching lines into a file
+> `chown -R <owner>:<group>` — stamps; `chmod` — switches (750 rooms, 640 papers)
+> `usermod -aG`, `id` — rooms and receipts
+> `rm` + `visudo -c` — the ledger ritual
+> `su - courier`, `sudo`, `exit` — borrow narrow, return fast
+
+The evidence in that vault is everything we have. The before, the
+after, the note, the extract, the witness, the distillate. If any
+of it dies tonight, it dies the way originals die — completely.
+There is no backup. You knew that before I said it.
+
+Walk the layers in the report's order: ownership before switches,
+switches before borrowing. Look before every deletion — the cards
+are nested where flattening would cost us. And everything the vault
+holds at dawn follows vault rules, including what you create.
+
+The courier is circling the block. Dawn is the deadline that's
+real.
 
 Then CHECK — but you'll know before you ask.
 
@@ -41,9 +40,9 @@ Breathe. Count the layers, out loud if you have to: who owns it,
 what the switches say, who may borrow, what flows where, what dies.
 Five questions, and every fault on this box is an answer to exactly
 one of them. You're not facing anything new — you're facing
-everything old, wearing each other's coats. Start with the vault:
-you can't stamp, lock, or fill a room you haven't reopened. And
-before anything dies tonight, you look at it. You know why.
+everything old, wearing each other's coats. The report gives you
+the order. Start with the vault: you can't stamp, lock, or fill a
+room you haven't reopened.
 
 </details>
 
@@ -54,12 +53,12 @@ In dependency order, tools only: the door opens with `chmod`, the
 stamps with `chown -R`, the file switches with `chmod` again —
 directory and contents are different numbers, you know them. The
 cards: `find` with a name pattern to *see* them all first, then
-delete what you saw — one of them is nested beside evidence, so no
-flattening. The config: an editor, one line, and you've held that
-scalpel twice. The extract: `grep -F` and an arrow, then remember
-the extract is now a vault file and vault rules apply to it. The
-key: `rm` in the ledger directory, then the proofreader. The burn:
-cross the room first. The receipt tells you if you crossed it right.
+delete what you saw — one is nested beside evidence, so no
+flattening. The config: an editor, one line. The extract: `grep`
+and an arrow, then remember the extract is now a vault file and
+vault rules apply to it. The key: `rm` in the ledger directory,
+then the proofreader. The burn: cross the room first. The receipt
+tells you if you crossed it right.
 
 </details>
 

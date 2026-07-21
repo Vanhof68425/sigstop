@@ -4,72 +4,50 @@ The drop:
 /var/sigstop/drop/
 ```
 
-Three things live there. Two are visible.
+Three things live there. Two are visible: `transmission_07.msg` (the
+source's message) and `reply.draft` (my two sentences). The third
+thing is the corpse. My session died with the draft open, and vim
+keeps its working copy in a hidden swap file beside the original.
+Until that body is gone, every visit to the draft starts with vim
+asking you about it.
 
-`transmission_07.msg` — the source's message. Read it first, and read
-it *in the theater*: open it in vim, move through it, leave with
-`:q!`. The original goes to the vault later, byte for byte, exactly
-as it arrived. `:q!` is the only exit that guarantees you changed
-nothing — which is why operators leave evidence rooms backwards, with
-their hands visible.
+> **Tonight's tools**
+> `ls -la <dir>` — list a directory, including hidden files (you learned this in World 1)
+> `rm <file>` — delete one file, permanently
+> A swap file is vim's working copy of a file being edited. It is named `.<filename>.swp` and hidden. A leftover one means a session ended badly.
 
-`reply.draft` — my two sentences. You'll see where I stopped.
+**This step: clear the corpse.**
 
-The third thing is the corpse. My session died with the draft open,
-and vim keeps its working copy in a hidden swap file beside the
-original. Until that body is gone, every visit to the draft starts
-with vim asking you about it.
+1. List the drop with `ls -la` and find the hidden swap file.
+2. Look at it if you want — `cat` will show garbage with a few
+   readable fragments. That's what a dead session leaves.
+3. Remove it with `rm`. My session saved before it died; the swap
+   holds nothing we need.
 
-Orders:
-
-1. **Clear the corpse.** You learned to see hidden files in World 1.
-   A swap file is not the file — it's a dead session's memory of one,
-   and my session saved before it died. Confirm the corpse is a
-   corpse, then remove it. vim's warning screen will even offer to do
-   it for you: that screen is not an error. It's a choice, with the
-   options printed on it.
-2. **Read the transmission.** In vim. Out with `:q!`.
-3. **Finish the reply.** Open `reply.draft`, get into insert state,
-   and add the ending the source asked for as the final line,
-   exactly:
-
-   ```
-   we act.
-   ```
-
-   With the period. Precision is identity. Then command state, `:wq`,
-   gone. My sentences stand as written — add the ending, nothing
-   else.
-
-Then CHECK. No codeword tonight. The reply is the signal.
+If you open `reply.draft` in vim before the swap is gone, vim shows
+a warning screen instead of the file. That screen is not an error —
+it lists lettered options at the bottom, and one of them,
+`(D)elete it`, removes the swap for you. Either path works.
 
 <details>
 <summary>&gt; ping handler</summary>
 
-Which state are you in? You don't know, do you. You're typing words
-that land as orders, or orders that land as words, and the screen is
-doing exactly what you told it instead of what you meant. Stop
-typing. `Esc` answers the question — it puts you in command state no
-matter where you were. And that warning screen you're afraid of:
-read it. All of it. vim isn't broken. vim is telling you someone was
-here before you and didn't leave properly — you already know that
-story — and the bottom of that screen is a list of everything you're
-allowed to do about it.
+The warning screen you're afraid of: read it. All of it. vim isn't
+broken. vim is telling you someone was here before you and didn't
+leave properly — you already know that story — and the bottom of
+that screen is a list of everything you're allowed to do about it.
+And if you can't *find* the corpse: hidden files don't show up
+unless you ask for all of them. You've asked before.
 
 </details>
 
 <details>
 <summary>&gt;&gt; ping again</summary>
 
-`ls -la` shows the drop's hidden resident. Swap files wear the name
-of their original: `.reply.draft.swp`. Remove it the way you've
-removed condemned files before — or open the draft and let vim's
-recovery screen handle it; one of the lettered options deletes the
-swap for you. Then: `vim` opens a file. `i` enters insert state —
-type normally, arrows move you. `Esc` returns you to command state.
-`:q!` leaves without saving. `:wq` saves and leaves. If the screen
-ever fills with things you didn't intend: `Esc`, `:q!`, breathe,
-walk back in. The file only changes when *you* write it.
+`ls -la /var/sigstop/drop` shows the hidden resident — swap files
+wear the name of their original: `.reply.draft.swp`. Remove it the
+way you've removed condemned files before, or open the draft in vim
+and press the letter for delete when the recovery screen offers it.
 
 </details>
 
@@ -81,15 +59,11 @@ Fine.
 ```
 ls -la /var/sigstop/drop
 rm /var/sigstop/drop/.reply.draft.swp
-vim /var/sigstop/drop/transmission_07.msg
-vim /var/sigstop/drop/reply.draft
+ls -la /var/sigstop/drop
 ```
 
-In the transmission: arrow keys to read, then `Esc`, `:q!`, enter.
-In the draft: arrow down to the last line, `i`, type `we act.` —
-with the period — then `Esc`, `:wq`, enter. Prove it from outside:
-`cat` the draft and read what you wrote. Now say the doors back to
-me: `i` in. `Esc` out. `:wq` keep. `:q!` burn. Four keys against the
-fear of a generation. Last time I explain them.
+The second listing proves the corpse is gone. Swap files are named
+`.<filename>.swp` and live beside their original. Say it back, then
+move on. Last time I explain this one.
 
 </details>

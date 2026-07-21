@@ -4,61 +4,50 @@ The ledger:
 /etc/sudoers.d/
 ```
 
-Two drop-in files. Read both before touching either — `cat` works,
-this is reading, not editing. One grants the courier exactly one
-command. The other grants a vendor account everything, forever, no
-password. You know which one dies.
+Files in this directory are grants: each line names who may borrow
+root, and for which commands. Two drop-in files live there tonight.
 
-Orders:
+> **Tonight's tools**
+> `ls -l <dir>` — list the directory (World 1)
+> `cat <file>` — print a file (reading is safe; editing this directory is not tonight's job)
+> A sudoers line reads: `who  where=(as-whom)  options: which-commands`. The last field — which commands — is the entire size of the grant.
 
-1. **Kill the skeleton key.** The vendor grant — the whole file —
-   gets removed. This is a deletion, so it's an eps2.1 problem:
-   look at what you're aiming at, confirm it's the right file, then
-   fire once. Afterward, run `visudo -c`. It proofreads the whole
-   ledger and says whether what remains is valid — the ritual after
-   *any* change in that directory, no exceptions, because a broken
-   ledger locks everyone out of borrowing at exactly the wrong
-   moment.
-2. **Cross the room.** `su - courier` — you're now the courier, and
-   the weather stops. Try to read the sealed door or the burn
-   receipt directory if you want to feel it. Denied is the correct
-   experience. Remember it: that's what everyone who isn't you sees.
-3. **Run the burn.** As the courier, borrow root for four seconds
-   through my grant and run `/usr/local/bin/relay-burn`. Then
-   `exit` — you return the borrowed identity the moment the job is
-   done, the same way you return borrowed root.
+**This step: read both grants. Change nothing yet.**
 
-The receipt has to name the courier. If it names anyone else, the
-ledger tells the wrong story, and stories in that ledger get people
-burned for real.
+1. `ls -l /etc/sudoers.d/` — two files.
+2. `cat` each one. Read the last field of each grant line.
 
-Then CHECK.
+One file grants the `courier` account exactly one command — the
+burn tool's full path. That grant is mine, and it stays.
+
+The other grants a vendor account `ALL`, with no password. `ALL`
+in the commands field means *every command on the box, as root,
+forever*. That is not a grant. That's a skeleton key under a
+doormat, and it has been there since the relay package installed
+it.
+
+When you've read both and can say which file is which, this step
+is done. Knowing what's in the ledger *before* touching it is the
+step.
 
 <details>
 <summary>&gt; ping handler</summary>
 
-You're doing the burn as root, aren't you — or you're still root
-*pretending* the grant matters, and the receipt is about to say so.
-The weather doesn't borrow; the weather just rains. The whole point
-of tonight is standing where the courier stands: an account the
-locks apply to, holding one narrow permission. Become them. Then
-borrow. And if you removed a file from the ledger and didn't run
-the proofreader afterward, you don't know what state the ledger is
-in. You believe. Operators don't believe.
+You want to start deleting. Not yet. An operator who edits a ledger
+they haven't read is an operator guessing, and guessing with root
+grants ends careers. Two files. Read both. The width of the last
+field tells you everything — one is a single path, one is a word
+that means everything.
 
 </details>
 
 <details>
 <summary>&gt;&gt; ping again</summary>
 
-`rm` the vendor drop-in — the filename tells you which one; read
-both first. `visudo -c` validates the ledger. `su - courier`
-switches you to the courier's identity (the `-` gives you their
-real environment). As courier: `sudo` in front of the burn command
-runs it as root — the grant in my drop-in is what makes that legal,
-and *only* for that one path. `exit` returns you. Confirm the
-receipt from your own seat: it lives under `/var/sigstop/burn/`,
-and the name on it is the test.
+`ls -l /etc/sudoers.d/` then `cat` each file by its full path. In
+each, find the grant line (the one not starting with `#`) and read
+its last field: one says `/usr/local/bin/relay-burn`, one says
+`ALL`. That difference is the whole of tonight.
 
 </details>
 
@@ -68,19 +57,14 @@ and the name on it is the test.
 Fine.
 
 ```
-cat /etc/sudoers.d/courier /etc/sudoers.d/apex-compat
-rm /etc/sudoers.d/apex-compat
-visudo -c
-su - courier
-sudo /usr/local/bin/relay-burn
-exit
-cat /var/sigstop/burn/receipt.log
+ls -l /etc/sudoers.d/
+cat /etc/sudoers.d/courier
+cat /etc/sudoers.d/apex-compat
 ```
 
-The receipt says `burned by: courier` — the borrow worked, the
-ledger is one narrow line, and the skeleton key is out from under
-the doormat. Say the fear back to me: the width of the commands
-field is the width of the hole. `ALL` is an abdication. `visudo -c`
-after every change. Last time I explain borrowed power.
+The courier file grants one command by full path. The apex-compat
+file grants ALL, no password, to a vendor account. Say the fear
+back: the width of the commands field is the width of the hole in
+your box. Last time I explain the grammar.
 
 </details>
