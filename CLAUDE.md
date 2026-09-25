@@ -182,17 +182,41 @@ banned words list in VOICE.md is enforced.
 
 ## Current state (update this section as episodes ship)
 Live: world1 complete (eps1.0–1.7), world2 complete (eps2.0–2.8,
-beginner pass applied), world3 pilot live: eps3.0_whats-running (ps,
-top; 2 steps) and eps3.1_kill-signal (STOP/CONT, TERM, KILL; 3 steps).
-Both were sandbox-tested on real processes before shipping.
+beginner pass applied), world3 live: eps3.0_whats-running (ps,
+top; 2 steps), eps3.1_kill-signal (STOP/CONT, TERM, KILL; 3 steps),
+eps3.2_background-noise (&, jobs, Ctrl+Z, bg, fg; 2 steps),
+eps3.3_service-desk (systemctl status; Restart=always resurrection
+then systemctl stop; disable + enable/start; 3 steps). All
+sandbox-tested on real processes; eps3.2's job control was tested by
+driving an interactive bash through a pty (pexpect).
+eps3.2 canon: drop 09 (source) says facilities booked a technician to
+"reimage" (wipe) node 07 in 72 hours: the World 3 clock. Tanaka is
+asking loudly where the compute is going. No reveal rung in 3.2.
+eps3.2 pattern: tools that REQUIRE the concept to succeed give an
+outcome-based proof (sigstop-mark refuses unless the sweep is running
+and not stopped; sigstop-decrypt's passphrase only exists after it
+starts). A second terminal tab also works; that's acceptable.
+eps3.3 canon (rung 3.3 delivered): prom-evald.service runs
+/srv/eval-sandbox/run/prom-evald as harness, Restart=always; unit and
+program written at 03:04; the handler checked logins: nobody was on
+the box. SIGSTOP left sigstop-listen.service on node 07 (logs every
+state change of prom-evald to /var/log/sigstop-listen.log): pay it off
+in 3.4/3.5 ("something will" start it again). Rule 9 contradiction
+used: intro "I've never seen a unit like this", finish "the unit I
+warned you about last week". Never explain it.
+Platform confirmed on KillerCoda: PID 1 is systemd (running),
+journalctl works, cron installed and active. Units use
+StartLimitIntervalSec=0 so repeated kills can't push them to "failed";
+verifies compare is-active to exactly "inactive" (a killed unit reads
+"activating" during its restart delay). Real journal bonus: setup's
+useradd shows in journalctl as "new user: name=harness ... from=none"
+(created with no terminal session) — usable in 3.4.
 Earlier canon from the eps2.4–2.8 arc still holds: all evidence left
 the box with the courier at the eps2.8 dawn pickup; /opt/apex stays
 sealed (000) by the player's own hand.
-Next planned (World 3 phase 2, after pilot playtest): eps3.2
-background-noise.job (&, jobs, Ctrl+Z, bg, fg; hooked in eps3.1's
-finish: "the copier ran in the background, out of sight"), eps3.3
-service-desk.svc (systemctl; Restart=always resurrects a killed
-process), eps3.4 paper-trail.log (journalctl, /var/log), eps3.5
+Next planned: eps3.4 paper-trail.log (journalctl, /var/log; hooked
+in eps3.3's finish: "the journal doesn't care who's embarrassed"),
+eps3.5
 clockwork.cron (the reveal), eps3.6 the-3am-page.root (boss: pause,
 don't kill). Check systemd and cron availability in setup; cron verifies
 must tolerate the minute boundary. Handler unreliability (rule 9): one

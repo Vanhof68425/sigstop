@@ -1,0 +1,13 @@
+{
+  "title": "eps3.2_background-noise.job",
+  "description": "The copier ran for months because nobody had to wait for it. Tonight you run things the same way.",
+  "details": {
+    "intro": { "text": "intro.md", "background": "setup.sh", "foreground": "foreground.sh" },
+    "steps": [
+      { "title": "Keep your prompt", "text": "step1.md", "verify": "verify1.sh" },
+      { "title": "Pause, move, return", "text": "step2.md", "verify": "verify2.sh" }
+    ],
+    "finish": { "text": "finish.md" }
+  },
+  "backend": { "imageid": "ubuntu" }
+}

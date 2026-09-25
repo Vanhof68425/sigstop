@@ -40,8 +40,8 @@ Status: `concept` → `drafted` → `built` → `playtested` → `live`
 |---|---|---|
 | [eps3.0_whats-running.ps](https://killercoda.com/vanhof/course/world3/eps3.0_whats-running) | `ps`, `top` | **live** |
 | [eps3.1_kill-signal.sig](https://killercoda.com/vanhof/course/world3/eps3.1_kill-signal) | signals, `kill`, and why we're named SIGSTOP | **live** |
-| eps3.2_background-noise.job | `&`, `fg`, `jobs` | concept |
-| eps3.3_service-desk.svc | `systemctl` start/stop/status | concept |
+| [eps3.2_background-noise.job](https://killercoda.com/vanhof/course/world3/eps3.2_background-noise) | `&`, `jobs`, Ctrl+Z, `bg`, `fg` | **live** |
+| [eps3.3_service-desk.svc](https://killercoda.com/vanhof/course/world3/eps3.3_service-desk) | `systemctl` status/stop/start/enable/disable | **live** |
 | eps3.4_paper-trail.log | `journalctl`, `/var/log` | concept |
 | eps3.5_clockwork.cron | `cron` | concept |
 | eps3.6_the-3am-page.root 👹 | BOSS — pegged CPU, dead service, logs tell the story | concept |

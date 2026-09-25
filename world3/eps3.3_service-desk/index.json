@@ -1,0 +1,14 @@
+{
+  "title": "eps3.3_service-desk.svc",
+  "description": "Jobs die with your shell. Services don't. Meet the manager that keeps them alive, and try to kill what it protects.",
+  "details": {
+    "intro": { "text": "intro.md", "background": "setup.sh", "foreground": "foreground.sh" },
+    "steps": [
+      { "title": "Read the service", "text": "step1.md", "verify": "verify1.sh" },
+      { "title": "The thing that comes back", "text": "step2.md", "verify": "verify2.sh" },
+      { "title": "Not at boot, not ever", "text": "step3.md", "verify": "verify3.sh" }
+    ],
+    "finish": { "text": "finish.md" }
+  },
+  "backend": { "imageid": "ubuntu" }
+}

@@ -2,7 +2,21 @@
   "title": "World 3 — The Runaway",
   "description": "Apex systems are misbehaving. Find it. Pause it. Kill it if you have to.",
   "items": [
-    { "path": "eps3.0_whats-running", "title": "eps3.0_whats-running.ps" },
-    { "path": "eps3.1_kill-signal", "title": "eps3.1_kill-signal.sig" }
+    {
+      "path": "eps3.0_whats-running",
+      "title": "eps3.0_whats-running.ps"
+    },
+    {
+      "path": "eps3.1_kill-signal",
+      "title": "eps3.1_kill-signal.sig"
+    },
+    {
+      "path": "eps3.2_background-noise",
+      "title": "eps3.2_background-noise.job"
+    },
+    {
+      "path": "eps3.3_service-desk",
+      "title": "eps3.3_service-desk.svc"
+    }
   ]
 }
