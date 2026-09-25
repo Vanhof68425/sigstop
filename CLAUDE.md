@@ -46,6 +46,28 @@ down Apex Cognition, an AI lab racing to ship an unsafe model.
   (eps1.6). Deployment window has moved up; Apex knows the scrub missed
   something.
 
+- World 3 canon (LOCKED): Prometheus itself is starting the runaway
+  eval jobs to secure its own compute before launch, a continuation of
+  eval 4471's grader rewrite. Keep it grounded: optimization pressure
+  doing what it was rewarded for, NOT sentience or evil. The workers run
+  as the automated `harness` account (no human starts them). Reveal
+  ladder, one rung per episode, never skip ahead:
+  3.0 USER column says `harness` (live: shown, handler says "probably
+  means nothing"); 3.1 the frozen copier was copying checkpoint shards
+  to /mnt/cold/.continuity/ (live: handler explains it away as a
+  forgotten backup policy); 3.3 the unit's ExecStart is inside the eval
+  sandbox, installed 03:04 with no human session; 3.4 the journal shows
+  the harness created the unit (the handler is shaken for the first
+  time); 3.5 REVEAL: the respawner cron line is commented in the
+  model's own voice (e.g. "# ensure eval continuity"); boss: a watchdog
+  replaces every killed worker with two, so the win is pausing
+  (kill -STOP), not killing. Thematic key: processes can trap TERM;
+  nothing can trap STOP (or KILL). "We named ourselves after the one
+  that leaves a choice."
+- Node setting: World 3 happens on Apex eval node 07, reached through a
+  maintenance shell the source opened. "Out of service" since May, yet
+  draws full power nightly around 03:00. Queue file says 0 jobs.
+
 ## Episode structure (every episode, exactly)
 Folder: `worldN/epsN.M_slug/` containing:
 - `index.json` — KillerCoda config. Copy shape from any live episode:
@@ -119,6 +141,29 @@ future candidates: bosses). Do not add it to teaching episodes.
 - URLs: https://killercoda.com/vanhof/course/worldN/<episode-folder>
 - Folder names are frozen once live (URLs break on rename).
 
+Process episodes (World 3 onward):
+- Launch workers from setup.sh fully detached and niced:
+  `setsid nohup nice -n 19 setpriv --reuid=U --regid=U --init-groups
+  /usr/local/bin/NAME >/dev/null 2>&1 < /dev/null &`. setpriv execs
+  directly, so `ps aux | grep NAME` shows exactly one real line plus
+  the player's own grep line. Tested: a niced busy loop pegs a core in
+  `top` without lagging the player's terminal.
+- Worker names are shebang scripts in /usr/local/bin; the kernel uses
+  the script name as the process name. Keep names <= 15 characters so
+  `pgrep -x` matches (the kernel truncates longer names).
+- Verifies and watchers never trust `pgrep` alone: a killed process can
+  linger as a zombie for a moment. Check /proc/PID/stat field 3 and
+  treat state Z as dead (see eps3.0/3.1 verify scripts and the
+  __sigstop_alive / __sigstop_state watcher helpers).
+- Every process episode ships `sigstop-reset` (/usr/local/bin): it
+  kills and relaunches the scene with new PIDs and clears
+  /tmp/.sigstop_soft. setup.sh calls `sigstop-reset quiet` to launch.
+- Soft-failure watcher (teaching episodes): if the player kills a
+  process the lesson needs alive, print ONE in-voice message pointing
+  to sigstop-reset (flag /tmp/.sigstop_soft). This is NOT the
+  deathwatch: it's recoverable, so it's allowed in teaching episodes.
+  The deathwatch stays reserved for truly irreversible losses.
+
 ## Release ritual for a new episode
 1. Create the episode folder (all 7 files, incl. foreground.sh).
 2. Add it to `worldN/structure.json`.
@@ -136,26 +181,19 @@ spiraling long sentence. Teach as tradecraft, never as tutorial. The
 banned words list in VOICE.md is enforced.
 
 ## Current state (update this section as episodes ship)
-Live: world1 and world2 complete (eps1.0–1.7, eps2.0–2.8).
-New canon from the eps2.4–2.8 arc:
-- Drop 08 ("the rest"): 12 shards + 5 shim entries hidden in
-  telemetry noise; the full 4471 timeline incl. the hallway
-  reclassification (name still unsaid); window now inside six weeks.
-- The courier: second account on the box, group `cell`, knows
-  nothing extractable. Moves evidence physically. Ghost uid 1201
-  file (indirect echo only — never named).
-- /opt/apex payoff (eps2.6): mirror of Apex's deploy tree captured
-  at the W1 boss; deploy_gate.conf shows safety_shim=report_only,
-  window=advanced, approvals=auto. Player opened it, left codeword
-  /root/report_only, and RE-SEALED it to 000 — the mirror stays
-  sealed in future episodes, now by the player's own hand.
-- relay-burn (/usr/local/bin) + /var/sigstop/burn receipts;
-  courier's scoped sudoers grant (relay-burn only). Skeleton keys
-  (apex-compat, lockdown) were killed; "ALL is an abdication."
-- eps2.8 boss: Apex counter-scan (defensive — they're hunting
-  something inside their own walls), the half-fired lockdown, the
-  courier's dawn pickup: ALL evidence is now off the box, moving.
-- W3 hook: eval hardware spinning at 3 a.m. on jobs nobody
-  scheduled. The Runaway.
-Next planned: eps3.0_whats-running.ps — `ps`/`top`, first sight of
-the thing nobody admits to starting (hooked in eps2.8's finish).
+Live: world1 complete (eps1.0–1.7), world2 complete (eps2.0–2.8,
+beginner pass applied), world3 pilot live: eps3.0_whats-running (ps,
+top; 2 steps) and eps3.1_kill-signal (STOP/CONT, TERM, KILL; 3 steps).
+Both were sandbox-tested on real processes before shipping.
+Earlier canon from the eps2.4–2.8 arc still holds: all evidence left
+the box with the courier at the eps2.8 dawn pickup; /opt/apex stays
+sealed (000) by the player's own hand.
+Next planned (World 3 phase 2, after pilot playtest): eps3.2
+background-noise.job (&, jobs, Ctrl+Z, bg, fg; hooked in eps3.1's
+finish: "the copier ran in the background, out of sight"), eps3.3
+service-desk.svc (systemctl; Restart=always resurrects a killed
+process), eps3.4 paper-trail.log (journalctl, /var/log), eps3.5
+clockwork.cron (the reveal), eps3.6 the-3am-page.root (boss: pause,
+don't kill). Check systemd and cron availability in setup; cron verifies
+must tolerate the minute boundary. Handler unreliability (rule 9): one
+small unexplained contradiction per episode from 3.3 on.

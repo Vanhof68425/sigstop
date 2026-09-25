@@ -1,0 +1,13 @@
+{
+  "title": "eps3.0_whats-running.ps",
+  "description": "An eval node with an empty queue, drawing full power at 3 a.m. Something is running. Find it. Don't touch it.",
+  "details": {
+    "intro": { "text": "intro.md", "background": "setup.sh", "foreground": "foreground.sh" },
+    "steps": [
+      { "title": "The photograph", "text": "step1.md", "verify": "verify1.sh" },
+      { "title": "The window", "text": "step2.md", "verify": "verify2.sh" }
+    ],
+    "finish": { "text": "finish.md" }
+  },
+  "backend": { "imageid": "ubuntu" }
+}

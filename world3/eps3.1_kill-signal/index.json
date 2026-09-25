@@ -1,0 +1,14 @@
+{
+  "title": "eps3.1_kill-signal.sig",
+  "description": "Almost nothing you send a process is an order. Two signals are. Pause. Inspect. Then decide.",
+  "details": {
+    "intro": { "text": "intro.md", "background": "setup.sh", "foreground": "foreground.sh" },
+    "steps": [
+      { "title": "Freeze the copier", "text": "step1.md", "verify": "verify1.sh" },
+      { "title": "Ask politely", "text": "step2.md", "verify": "verify2.sh" },
+      { "title": "The one that won't listen", "text": "step3.md", "verify": "verify3.sh" }
+    ],
+    "finish": { "text": "finish.md" }
+  },
+  "backend": { "imageid": "ubuntu" }
+}

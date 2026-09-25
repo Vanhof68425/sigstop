@@ -6,7 +6,7 @@
 #      beside the witness evidence (the eps2.1 trap, again, for real)
 #   3. relay.conf endpoint reverted to the breach line (eps2.2 echo)
 #   4. /etc/sudoers.d/lockdown: emergency NOPASSWD ALL, unrevoked
-#   5. scan.log flood: 120 noise lines + 8 [counter //] lines to
+#   5. scan.log flood: 120 noise lines + 8 COUNTER-INT lines to
 #      route into the vault under vault rules
 # Finale: the burn via the courier's standing grant.
 # Watcher: deathwatch on the six evidence markers (BOSS privilege),

@@ -40,6 +40,6 @@ World 3. The Runaway. Find it. Pause it. Kill it if you have to.
 
 ---
 
-**World 3 is being decrypted. Check [the level map](https://github.com/Vanhof68425/sigstop/blob/main/LEVELMAP.md) or [the course](https://killercoda.com/vanhof) — the transmission appears the moment it's ready.**
+**[> next transmission: eps3.0_whats-running.ps — World 3: The Runaway](https://killercoda.com/vanhof/course/world3/eps3.0_whats-running)**
 
 *(One live session at a time — close this tab behind you, or take the SCENARIOS door. An operator never leaves a channel open.)*

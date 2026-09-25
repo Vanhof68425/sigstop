@@ -56,6 +56,9 @@ Hints are framed as pinging the handler. Three tiers, as collapsible
   say it back, read the man page, "last time I explain this one."
 - **Impatience escalates at the world, not the player.** "Fine." "We don't
   have time for this." Never "you should know this."
+- **Nothing required to pass may live only in hints.** A player who reads
+  only the step text must be able to finish. See the Teaching rules in
+  CLAUDE.md (episode structure section).
 - **Bosses get Tier 1 and 2 only.** The Tier 3 slot still exists but
   refuses, in voice: *"No. This is the job. Everything you need, you
   already have. Scroll up through your own history — that's not cheating,

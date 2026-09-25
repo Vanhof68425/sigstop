@@ -1,6 +1,16 @@
 {
   "items": [
-    { "path": "world1", "title": "World 1 — The Approach" },
-    { "path": "world2", "title": "World 2 — Tradecraft" }
+    {
+      "path": "world1",
+      "title": "World 1 — The Approach"
+    },
+    {
+      "path": "world2",
+      "title": "World 2 — Tradecraft"
+    },
+    {
+      "path": "world3",
+      "title": "World 3 — The Runaway"
+    }
   ]
 }
