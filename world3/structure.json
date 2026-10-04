@@ -17,6 +17,10 @@
     {
       "path": "eps3.3_service-desk",
       "title": "eps3.3_service-desk.svc"
+    },
+    {
+      "path": "eps3.4_paper-trail",
+      "title": "eps3.4_paper-trail.log"
     }
   ]
 }
