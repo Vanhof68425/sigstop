@@ -39,6 +39,6 @@ Next transmission: **eps3.4_paper-trail.log**
 
 ---
 
-**eps3.4 is being decrypted. Check [the level map](https://github.com/Vanhof68425/sigstop/blob/main/LEVELMAP.md) or [World 3](https://killercoda.com/vanhof/course/world3) — the transmission appears the moment it's ready.**
+**[> next transmission: eps3.4_paper-trail.log](https://killercoda.com/vanhof/course/world3/eps3.4_paper-trail)**
 
 *(One live session at a time — close this tab behind you, or take the SCENARIOS door. An operator never leaves a channel open.)*

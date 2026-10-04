@@ -1,0 +1,14 @@
+{
+  "title": "eps3.4_paper-trail.log",
+  "description": "You stopped it. You disabled it. It's running again. A listener can tell you when. The paper trail tells you who.",
+  "details": {
+    "intro": { "text": "intro.md", "background": "setup.sh", "foreground": "foreground.sh" },
+    "steps": [
+      { "title": "When", "text": "step1.md", "verify": "verify1.sh" },
+      { "title": "What", "text": "step2.md", "verify": "verify2.sh" },
+      { "title": "Who", "text": "step3.md", "verify": "verify3.sh" }
+    ],
+    "finish": { "text": "finish.md" }
+  },
+  "backend": { "imageid": "ubuntu" }
+}

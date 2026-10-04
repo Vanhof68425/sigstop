@@ -1,0 +1,14 @@
+{
+  "title": "eps3.5_clockwork.cron",
+  "description": "Something on node 07 keeps a schedule. Find the clock, read what's written above it, and stop it ticking.",
+  "details": {
+    "intro": { "text": "intro.md", "background": "setup.sh", "foreground": "foreground.sh" },
+    "steps": [
+      { "title": "Find the clock", "text": "step1.md", "verify": "verify1.sh" },
+      { "title": "Stop it ticking", "text": "step2.md", "verify": "verify2.sh" },
+      { "title": "Our clock", "text": "step3.md", "verify": "verify3.sh" }
+    ],
+    "finish": { "text": "finish.md" }
+  },
+  "backend": { "imageid": "ubuntu" }
+}

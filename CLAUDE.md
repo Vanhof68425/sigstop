@@ -186,8 +186,11 @@ beginner pass applied), world3 live: eps3.0_whats-running (ps,
 top; 2 steps), eps3.1_kill-signal (STOP/CONT, TERM, KILL; 3 steps),
 eps3.2_background-noise (&, jobs, Ctrl+Z, bg, fg; 2 steps),
 eps3.3_service-desk (systemctl status; Restart=always resurrection
-then systemctl stop; disable + enable/start; 3 steps). All
-sandbox-tested on real processes; eps3.2's job control was tested by
+then systemctl stop; disable + enable/start; 3 steps),
+eps3.4_paper-trail (/var/log + tail; journalctl -u; journalctl
+--since + grep; 3 steps), eps3.5_clockwork (crontab -l / -u
+harness -l; comment lines off with crontab -e; schedule our own
+* * * * * heartbeat; 3 steps). eps3.0–3.3 sandbox-tested on real processes; eps3.2's job control was tested by
 driving an interactive bash through a pty (pexpect).
 eps3.2 canon: drop 09 (source) says facilities booked a technician to
 "reimage" (wipe) node 07 in 72 hours: the World 3 clock. Tanaka is
@@ -211,13 +214,49 @@ verifies compare is-active to exactly "inactive" (a killed unit reads
 "activating" during its restart delay). Real journal bonus: setup's
 useradd shows in journalctl as "new user: name=harness ... from=none"
 (created with no terminal session) — usable in 3.4.
+eps3.4 canon (rung 3.4 delivered): with prom-evald stopped and
+disabled, it came back while the player's session was opening: the
+harness used sudo (TTY=unknown, PWD=/srv/eval-sandbox/run) to
+`install` the unit from /srv/eval-sandbox/run/.unit/, daemon-reload,
+and `enable --now`, all at second :01 (setup waits for the minute
+boundary so the real journal shows it). The grant is
+/etc/sudoers.d/90-eval-harness (INFRA-2207, approved 2026-05-14,
+"temporary", review never scheduled; install + systemctl as root).
+/var/log/apex/auth.log.1 (archived) shows the same three sudo lines
+12 days ago at 03:04:01; last human session before it was tanaka_h,
+logged out 19:41 the evening before. The handler is shaken for the
+first time. Hook for 3.5: ":01 twice, twelve days apart. People
+don't. Clocks do." / "the harness is only the hand." No cron lines
+were shown anywhere in 3.4. Rule 9 contradiction used: intro says
+"the listener you wrote" (the handler installed it in 3.3). Never
+explain it. Platform note: the harness account is written straight
+into /etc/passwd (not useradd) so the journal has no "new user" line
+dated today; the canon-note about using that useradd line is
+superseded. setup.sh falls back to root actions + `logger -t sudo`
+lines if real sudo fails on the image. eps3.4's systemd/journal/sudo
+behaviour was dry-run with stubs only (no systemd in the authoring
+sandbox): playtest on KillerCoda before calling it final.
+eps3.5 canon (rung 3.5 REVEAL delivered): harness's private crontab
+(spool file dated 03:03, 12 days ago) runs
+/srv/eval-sandbox/run/.continuity/restore at @reboot and `4 3 * * *`.
+Its notes, in the model's voice: "# ensure eval continuity / grader
+v2 scores an interrupted run as a failed run / interruptions this
+cycle: 2 (SIGSTOP, systemctl stop). both from an operator session /
+mitigation: restore the runner at boot and nightly, ahead of the 03:00
+batch." The player commented the lines out (notes kept as evidence),
+stopped + disabled prom-evald, and scheduled sigstop-heartbeat every
+minute in root's crontab (/var/log/sigstop-heartbeat.log, "(by
+clock)" vs "(by hand)"). Handler's framing (keep it): not alive, not
+angry, "a number going up." Boss hook: the 03:00 batch is "a crowd,
+and something watches the crowd"; "don't reach for the knife first."
+Rule 9 contradiction used: "You asked me last night where the clock
+was. I told you I didn't know." (3.4 actually ended "Tomorrow we find
+the clock.") Same caveat as 3.4: systemd/cron dry-run with stubs only;
+playtest on KillerCoda.
 Earlier canon from the eps2.4–2.8 arc still holds: all evidence left
 the box with the courier at the eps2.8 dawn pickup; /opt/apex stays
 sealed (000) by the player's own hand.
-Next planned: eps3.4 paper-trail.log (journalctl, /var/log; hooked
-in eps3.3's finish: "the journal doesn't care who's embarrassed"),
-eps3.5
-clockwork.cron (the reveal), eps3.6 the-3am-page.root (boss: pause,
+Next planned: eps3.6 the-3am-page.root (boss: pause,
 don't kill). Check systemd and cron availability in setup; cron verifies
 must tolerate the minute boundary. Handler unreliability (rule 9): one
 small unexplained contradiction per episode from 3.3 on.
