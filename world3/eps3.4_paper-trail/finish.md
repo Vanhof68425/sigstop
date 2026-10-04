@@ -52,6 +52,6 @@ Next transmission: **eps3.5_clockwork.cron**
 
 ---
 
-**eps3.5 is being decrypted. Check [the level map](https://github.com/Vanhof68425/sigstop/blob/main/LEVELMAP.md) or [World 3](https://killercoda.com/vanhof/course/world3) — the transmission appears the moment it's ready.**
+**[> next transmission: eps3.5_clockwork.cron](https://killercoda.com/vanhof/course/world3/eps3.5_clockwork)**
 
 *(One live session at a time — close this tab behind you, or take the SCENARIOS door. An operator never leaves a channel open.)*

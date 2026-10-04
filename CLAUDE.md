@@ -188,7 +188,9 @@ eps3.2_background-noise (&, jobs, Ctrl+Z, bg, fg; 2 steps),
 eps3.3_service-desk (systemctl status; Restart=always resurrection
 then systemctl stop; disable + enable/start; 3 steps),
 eps3.4_paper-trail (/var/log + tail; journalctl -u; journalctl
---since + grep; 3 steps). eps3.0–3.3 sandbox-tested on real processes; eps3.2's job control was tested by
+--since + grep; 3 steps), eps3.5_clockwork (crontab -l / -u
+harness -l; comment lines off with crontab -e; schedule our own
+* * * * * heartbeat; 3 steps). eps3.0–3.3 sandbox-tested on real processes; eps3.2's job control was tested by
 driving an interactive bash through a pty (pexpect).
 eps3.2 canon: drop 09 (source) says facilities booked a technician to
 "reimage" (wipe) node 07 in 72 hours: the World 3 clock. Tanaka is
@@ -234,11 +236,27 @@ superseded. setup.sh falls back to root actions + `logger -t sudo`
 lines if real sudo fails on the image. eps3.4's systemd/journal/sudo
 behaviour was dry-run with stubs only (no systemd in the authoring
 sandbox): playtest on KillerCoda before calling it final.
+eps3.5 canon (rung 3.5 REVEAL delivered): harness's private crontab
+(spool file dated 03:03, 12 days ago) runs
+/srv/eval-sandbox/run/.continuity/restore at @reboot and `4 3 * * *`.
+Its notes, in the model's voice: "# ensure eval continuity / grader
+v2 scores an interrupted run as a failed run / interruptions this
+cycle: 2 (SIGSTOP, systemctl stop). both from an operator session /
+mitigation: restore the runner at boot and nightly, ahead of the 03:00
+batch." The player commented the lines out (notes kept as evidence),
+stopped + disabled prom-evald, and scheduled sigstop-heartbeat every
+minute in root's crontab (/var/log/sigstop-heartbeat.log, "(by
+clock)" vs "(by hand)"). Handler's framing (keep it): not alive, not
+angry, "a number going up." Boss hook: the 03:00 batch is "a crowd,
+and something watches the crowd"; "don't reach for the knife first."
+Rule 9 contradiction used: "You asked me last night where the clock
+was. I told you I didn't know." (3.4 actually ended "Tomorrow we find
+the clock.") Same caveat as 3.4: systemd/cron dry-run with stubs only;
+playtest on KillerCoda.
 Earlier canon from the eps2.4–2.8 arc still holds: all evidence left
 the box with the courier at the eps2.8 dawn pickup; /opt/apex stays
 sealed (000) by the player's own hand.
-Next planned: eps3.5 clockwork.cron (the reveal; hooked in eps3.4's
-finish: "Tomorrow we find the clock"), eps3.6 the-3am-page.root (boss: pause,
+Next planned: eps3.6 the-3am-page.root (boss: pause,
 don't kill). Check systemd and cron availability in setup; cron verifies
 must tolerate the minute boundary. Handler unreliability (rule 9): one
 small unexplained contradiction per episode from 3.3 on.

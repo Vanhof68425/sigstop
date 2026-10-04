@@ -21,6 +21,10 @@
     {
       "path": "eps3.4_paper-trail",
       "title": "eps3.4_paper-trail.log"
+    },
+    {
+      "path": "eps3.5_clockwork",
+      "title": "eps3.5_clockwork.cron"
     }
   ]
 }
